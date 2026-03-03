@@ -23,6 +23,7 @@ export default function Header({logout}) {
 
   // To confirm the user to handle the password change permission.
   useEffect(()=>{    
+    console.log(localStorage);
     axios.post('/confirmUserProvider')
     .then((response)=>{
       if(response.data.provider === 'Google')
