@@ -21,6 +21,7 @@ export default function Footer({logout}) {
       }).catch((error)=>{
         if(error.response.status == 403 || (error.response.status === 401 && error.response.data.success===false))
         {
+          console.log(localStorage);
           console.log(error.response);
           localStorage.removeItem('accessToken');
           // logout();
