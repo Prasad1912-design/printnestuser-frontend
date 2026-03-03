@@ -109,7 +109,7 @@ const { cartCounts, fetchCartCount } = useCount();
     setTimeout(()=>{
       setLogoutStatus(false);
       localStorage.removeItem('accessToken');
-      logout();
+      // logout();
     },2000);
   }
 
