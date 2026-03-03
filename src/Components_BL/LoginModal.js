@@ -35,35 +35,32 @@ export default function LoginModal({ close, login }) {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    axios.post('/loginApi',{
-        email_id : email,
-        password_ : password
-    }).then((res)=>{ 
-      console.log(res.data);
-      if(res.data.success)
-      {
-      console.log(res.data);
-      setError("");
+axios.post('/loginApi', {
+  email_id: email,
+  password_: password
+})
+.then((res) => { 
+  console.log("Login response:", res.data);
+  if(res.data.success) {
+    setError("");
 
-       localStorage.setItem("accessToken", res.data.accessToken);
-        setLogin(true);
+    // 1️⃣ Save token immediately
+    localStorage.setItem("accessToken", res.data.accessToken);
 
-       setTimeout(()=>
-      {
-        setLogin(false);
+    // 2️⃣ Update login state immediately
+    login();  // your parent function to update auth state
+    close();  // close modal
 
-        login();
-        close();
-      },2000)   
-      }
-      else
-      {
-        setError(res.data.message + "❌");
-      }
-    }).catch((err)=>{
-      console.log(err);
-    })
+    // Optional loader (if you want to show 2s)
+    setLogin(true);
+    setTimeout(() => setLogin(false), 2000);
+  } else {
+    setError(res.data.message + "❌");
   }
+})
+.catch((err) => {
+  console.log(err);
+});
 
 
 
