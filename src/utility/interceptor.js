@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://printnestuser-backend.onrender.com/' // This should point to your Render backend
+  baseURL: process.env.BACKEND_URL || 'http://localhost:5000' // This should point to your Render backend
 });
 
 instance.interceptors.request.use((config)=>{
