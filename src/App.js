@@ -6,7 +6,7 @@ import interceptor from "./utility/interceptor"; // The line where you written t
 
 function App() {
   return (
-    <BrowserRouter basename="/PrintNest">
+    <BrowserRouter>
       <CreateContext>
         <Approutes />
       </CreateContext>
