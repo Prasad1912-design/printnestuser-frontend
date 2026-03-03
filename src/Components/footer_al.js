@@ -19,12 +19,12 @@ export default function Footer({logout}) {
           setProvider(response.data.provider);
         }
       }).catch((error) => {
-          if (error.response?.status === 401 || error.response?.status === 403) {
-            localStorage.removeItem("accessToken"); // remove invalid token
-            logout(); // call your logout function
-          } else {
-            console.log(error.response?.data);
-          }
+        if (error.response?.status === 401 || error.response?.status === 403) {
+          localStorage.removeItem("accessToken"); // remove invalid token
+          logout(); // call your logout function
+        } else {
+          console.log(error.response?.data);
+        }
 })
     },[])
 
