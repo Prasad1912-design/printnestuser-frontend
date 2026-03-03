@@ -41,7 +41,7 @@ export default function LoginModal({ close, login }) {
     }).then((res)=>{ 
       if(res.data.success)
       {
-      console.log(res.data.message);
+      console.log(res.data);
       setError("");
 
        localStorage.setItem("accessToken", res.data.accessToken);
