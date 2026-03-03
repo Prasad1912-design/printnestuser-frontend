@@ -36,9 +36,8 @@ export default function Header({logout}) {
     }).catch((error)=>{
       if(error.response.status == 403 || (error.response.status === 401 && error.response.data.success===false))
       {
-        console.log(error.response);
         localStorage.removeItem('accessToken');
-        // //logout();
+        logout();
       }
       else
       {
@@ -90,7 +89,7 @@ const { cartCounts, fetchCartCount } = useCount();
         console.log("Logout Order History Page");
         console.log(err.response.status);
         localStorage.removeItem('accessToken');
-        //logout();
+        logout();
       }
     })
 
@@ -109,7 +108,7 @@ const { cartCounts, fetchCartCount } = useCount();
     setTimeout(()=>{
       setLogoutStatus(false);
       localStorage.removeItem('accessToken');
-      //logout();
+      logout();
     },2000);
   }
 
