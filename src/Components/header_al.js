@@ -90,7 +90,7 @@ const { cartCounts, fetchCartCount } = useCount();
         console.log("Logout Order History Page");
         console.log(err.response.status);
         localStorage.removeItem('accessToken');
-        logout();
+        // logout();
       }
     })
 
@@ -109,7 +109,7 @@ const { cartCounts, fetchCartCount } = useCount();
     setTimeout(()=>{
       setLogoutStatus(false);
       localStorage.removeItem('accessToken');
-      logout();
+      // logout();
     },2000);
   }
 
