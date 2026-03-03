@@ -41,11 +41,11 @@ export default function LoginModal({ close, login }) {
     }).then((res)=>{ 
       if(res.data.success)
       {
-        console.log(res.data.message);
-        setError("");
-        
-        localStorage.setItem("accessToken", res.data.accessToken);
         cosole.log(res.data);
+      console.log(res.data.message);
+      setError("");
+
+       localStorage.setItem("accessToken", res.data.accessToken);
         setLogin(true);
 
        setTimeout(()=>

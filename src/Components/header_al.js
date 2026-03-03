@@ -22,8 +22,7 @@ export default function Header({logout}) {
   let userInfo = "";
 
   // To confirm the user to handle the password change permission.
-  useEffect(()=>{   
-    console.log(localStorage.getItem('accessToken'));
+  useEffect(()=>{    
     axios.post('/confirmUserProvider')
     .then((response)=>{
       if(response.data.provider === 'Google')
@@ -38,7 +37,7 @@ export default function Header({logout}) {
       if(error.response.status == 403 || (error.response.status === 401 && error.response.data.success===false))
       {
         localStorage.removeItem('accessToken');
-        // logout();
+        logout();
       }
       else
       {
@@ -90,7 +89,7 @@ const { cartCounts, fetchCartCount } = useCount();
         console.log("Logout Order History Page");
         console.log(err.response.status);
         localStorage.removeItem('accessToken');
-        // logout();
+        logout();
       }
     })
 
