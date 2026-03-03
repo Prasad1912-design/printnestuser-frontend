@@ -41,7 +41,6 @@ export default function LoginModal({ close, login }) {
     }).then((res)=>{ 
       if(res.data.success)
       {
-      cosole.log(res.data);
       console.log(res.data.message);
       setError("");
 
