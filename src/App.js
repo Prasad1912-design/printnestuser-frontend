@@ -6,11 +6,11 @@ import interceptor from "./utility/interceptor"; // The line where you written t
 
 function App() {
   return (
-    <BrowserRouter basename="/">
-      <CreateContext>
-        <Approutes />
-      </CreateContext>
-    </BrowserRouter>
+  <BrowserRouter basename="/">
+    <CreateContext>
+      <Approutes />
+    </CreateContext>
+  </BrowserRouter>
   );
 }
 
