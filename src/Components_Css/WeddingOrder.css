@@ -1,0 +1,150 @@
+.wedding-bg {
+  background: linear-gradient(to bottom right, #fffdfd, #f7faff);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Title ---------- */
+.gradient-text {
+  background: linear-gradient(to right, #0066ff, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #0066ff, #ffcc00);
+  border-radius: 2px;
+}
+
+/* ---------- Product Card ---------- */
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+  position: relative;
+}
+
+.product-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Image Section */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  height: 330px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 123, 255, 0.08), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.product-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Content Section */
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin: 6px 0;
+}
+
+.card-content .product-id {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.card-content .desc {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  height: 45px;
+  overflow: hidden;
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.price {
+  font-weight: 600;
+  color: #0b8c39;
+  font-size: 1.1rem;
+}
+
+.stars {
+  color: #ffcc00;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #00b4ff);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056d6, #0098e5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #ffcc00, #ffdf40);
+  color: #222;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #f0b800, #ffe266);
+  transform: translateY(-2px);
+}

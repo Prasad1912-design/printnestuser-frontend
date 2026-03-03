@@ -1,0 +1,79 @@
+/* General loader spinner */
+.loader {
+  border: 4px solid #e5e7eb; /* Light gray */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-top-color: #4f46e5; /* Indigo color */
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse effect for placeholder cards */
+.placeholder-card {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: loadingShimmer 1.5s infinite;
+  border-radius: 10px;
+  height: 250px;
+}
+
+@keyframes loadingShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* No products found box */
+.no-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.no-products img {
+  width: 150px;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.no-products h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.no-products p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.no-products button {
+  margin-top: 20px;
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.no-products button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}

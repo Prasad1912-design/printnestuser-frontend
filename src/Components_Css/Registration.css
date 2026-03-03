@@ -1,0 +1,133 @@
+/* Red border for empty input */
+
+.input-error {
+  border: 2px solid red !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Logo */
+.logo-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+.logo-container img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+/* Form Container */
+.registration-container {
+  max-width: 800px;
+  margin: 2rem auto 5rem auto;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-header {
+  background: #2db0b9;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.registration-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.registration-header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Form */
+.registration-form {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.registration-form h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.registration-form label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+  outline: none;
+  border-color: #2db0b9;
+  box-shadow: 0 0 5px rgba(45,176,185,0.4);
+}
+
+/* File Upload */
+.file-input {
+  border: 2px dashed #2db0b9;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+.file-input:hover {
+  background-color: #f0f9fb;
+}
+
+.back-home {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2db0b9;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.back-home:hover {
+  color: #1a8a8e;
+}
+
+/* Submit Button */
+button.submit-btn {
+  background-color: #2db0b9;
+  color: white;
+  padding: 0.8rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+button.submit-btn:hover {
+  background-color: #1a8a8e;
+}
+
+@media(max-width:768px) {
+  .registration-container {
+    margin: 2rem 1rem;
+  }
+  .logo-container img {
+    width: 100px;
+    height: 100px;
+  }
+}

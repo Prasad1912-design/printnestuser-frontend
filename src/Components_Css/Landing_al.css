@@ -1,0 +1,36 @@
+body { font-family: 'Inter', sans-serif; }
+
+/* Dropdown transitions */
+.dropdown-menu { transition: all 0.3s ease; }
+.dropdown-menu.hidden { opacity: 0; transform: translateY(-10px); pointer-events: none; }
+.dropdown-menu.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* Floating WhatsApp button */
+#whatsappBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#whatsappBtn:hover { transform: scale(1.1); }
+
+/* Continuous horizontal slide animation */
+@keyframes slide-continuous {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.sliding-carousel {
+  display: flex;
+  width: max-content;
+  animation: slide-continuous 50s linear infinite;
+}

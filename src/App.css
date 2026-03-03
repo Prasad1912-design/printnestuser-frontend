@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.loader {
+  border-width: 4px;
+  border-style: solid;
+  border-color: #3b82f6 transparent transparent transparent;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
