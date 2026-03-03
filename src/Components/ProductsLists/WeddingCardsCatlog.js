@@ -114,7 +114,7 @@ const WeddingCardsCatalog = () => {
           <img src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png" alt="No products" />
           <h2>Currently No Active {slug} Found Sorry...</h2>
           <p>We couldn’t find any products in this category right now. Please check back later or explore other categories.</p>
-          <button onClick={() => window.location.href = '/PrintNest/placeOrder'}>Try Another Category</button>
+          <button onClick={() => window.location.href = '/placeOrder'}>Try Another Category</button>
         </div>
       )}
 
