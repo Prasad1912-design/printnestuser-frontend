@@ -18,19 +18,14 @@ export default function Footer({logout}) {
         {
           setProvider(response.data.provider);
         }
-      }).catch((error)=>{
-        if(error.response.status == 403 || (error.response.status === 401 && error.response.data.success===false))
-        {
-          console.log(localStorage);
-          console.log(error.response);
-          localStorage.removeItem('accessToken');
-          // logout();
-        }
-        else
-        {
-          console.log(error.response.data);
-        }
-      })
+      }).catch((error) => {
+          if (error.response?.status === 401 || error.response?.status === 403) {
+            localStorage.removeItem("accessToken"); // remove invalid token
+            logout(); // call your logout function
+          } else {
+            console.log(error.response?.data);
+          }
+})
     },[])
 
   const quickLinks = ["Home", "Place Order", "Gallery", "Help Center", "Account", "Testimonials"];
