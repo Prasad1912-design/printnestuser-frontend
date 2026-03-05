@@ -23,7 +23,6 @@ export default function Header({logout}) {
 
   // To confirm the user to handle the password change permission.
   useEffect(()=>{    
-    console.log(localStorage);
     axios.post('/confirmUserProvider')
     .then((response)=>{
       if(response.data.provider === 'Google')
@@ -37,7 +36,6 @@ export default function Header({logout}) {
     }).catch((error)=>{
       if(error.response.status == 403 || (error.response.status === 401 && error.response.data.success===false))
       {
-        console.log(error.response);
         localStorage.removeItem('accessToken');
         logout();
       }
@@ -51,7 +49,6 @@ export default function Header({logout}) {
   if(token)
   {
     userInfo = jwtDecode(token);
-    console.log(userInfo);
   }
     
   //Context API Object.
@@ -59,6 +56,7 @@ const { cartCounts, fetchCartCount } = useCount();
 
 // Fethc the cart count dynamically when we logged in initially.
   useEffect(()=>{
+    console.log("PRASAD");
     fetchCartCount();
   },[])
 
@@ -88,8 +86,6 @@ const { cartCounts, fetchCartCount } = useCount();
     }).catch((err)=>{
       if(err.response.status === 403)
       {
-        console.log("Logout Order History Page");
-        console.log(err.response.status);
         localStorage.removeItem('accessToken');
         logout();
       }
