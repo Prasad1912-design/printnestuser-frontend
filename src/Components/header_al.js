@@ -39,7 +39,7 @@ export default function Header({logout}) {
       {
         console.log(error.response);
         localStorage.removeItem('accessToken');
-        // logout();
+        logout();
       }
       else
       {
@@ -91,7 +91,7 @@ const { cartCounts, fetchCartCount } = useCount();
         console.log("Logout Order History Page");
         console.log(err.response.status);
         localStorage.removeItem('accessToken');
-        // logout();
+        logout();
       }
     })
 
