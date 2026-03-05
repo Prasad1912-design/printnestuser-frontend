@@ -225,7 +225,7 @@ export default function LoginModal({ close, login }) {
           <p className="text-center text-sm text-gray-600 mt-6">
             Don’t have an account?{" "}
             <a
-              href="PrintNest/RegisterationPage"
+              href="/RegisterationPage"
               className="text-blue-600 font-semibold hover:underline"
             >
               Create one
