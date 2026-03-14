@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom';
 
 export default function Home() {
   const images = [
-    "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1500&q=80"
+    "/Images/ratecard.png",
+    "/Images/ratesDown.png",
+    "samedaydelivery.png",
+    "bothsideFoiling.png",
+    "bookOrder.png"
   ];
 
   const [current, setCurrent] = useState(0);
