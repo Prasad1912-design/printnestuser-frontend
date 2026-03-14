@@ -4,6 +4,7 @@ import CountUp from 'react-countup';
 
 import { useNavigate } from 'react-router-dom';
 
+
 // Loading Animation Call LoaderFunction -> It will call Loader.
 // Common Function for adding Loading.
 import LoaderFunction from '../Loader/LoaderFunction';
@@ -33,9 +34,9 @@ export default function Landing_al() {
 
     {/* <!-- Sliding Images Container --> */}
     <div className="sliding-carousel relative z-0">
-      <img src="https://img.freepik.com/free-vector/business-card-mockup_53876-104740.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Business Cards" />
-      <img src="https://img.freepik.com/free-vector/flyer-mockup-template_23-2148890041.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Flyers" />
-      <img src="https://img.freepik.com/free-vector/brochure-mockup_23-2148890055.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Brochures" />
+      <img src="/Images/printnestuihomepage.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Business Cards" />
+      <img src="/Images/printnestuihome2.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Flyers" />
+      <img src="/Images/printnestuihome3.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Brochures" />
       <img src="https://img.freepik.com/free-vector/banner-mockup_23-2148890060.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Banners" />
       <img src="https://img.freepik.com/free-vector/stationery-mockup_23-2148890029.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Stationery" />
       {/* <!-- Duplicate images for smooth loop --> */}
