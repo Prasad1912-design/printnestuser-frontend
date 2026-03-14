@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
+import '../Components_Css/home_bl.css';
 
 export default function Home() {
   const images = [
     "/Images/ratecard.png",
     "/Images/ratesDown.png",
-    "samedaydelivery.png",
-    "bothsideFoiling.png",
-    "bookOrder.png"
+    "/Images/samedaydelivery.png",
+    "/Images/bothsideFoiling.png",
+    "/Images/bookOrder.png"
   ];
 
   const [current, setCurrent] = useState(0);
