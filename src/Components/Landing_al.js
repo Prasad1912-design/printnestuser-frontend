@@ -30,7 +30,7 @@ export default function Landing_al() {
  
   {/* <!-- Hero Section --> */}
   <section className="relative w-full overflow-hidden pt-16" >
-    <div className="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
+    <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
 
     {/* <!-- Sliding Images Container --> */}
     <div className="sliding-carousel relative z-0">
