@@ -34,9 +34,9 @@ export default function Landing_al() {
 
     {/* <!-- Sliding Images Container --> */}
     <div className="sliding-carousel relative z-0">
-      <img src="/Images/printnestuihomepage.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Business Cards" />
-      <img src="/Images/printnestuihome2.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Flyers" />
-      <img src="/Images/printnestuihome3.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Brochures" />
+      <img src="../Images/printnestuihomepage.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Business Cards" />
+      <img src="../Images/printnestuihome2.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Flyers" />
+      <img src="../Images/printnestuihome3.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Brochures" />
       <img src="https://img.freepik.com/free-vector/banner-mockup_23-2148890060.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Banners" />
       <img src="https://img.freepik.com/free-vector/stationery-mockup_23-2148890029.jpg" className="h-96 object-cover rounded-lg shadow-lg" alt="Stationery" />
       {/* <!-- Duplicate images for smooth loop --> */}
