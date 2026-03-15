@@ -100,8 +100,8 @@ export default function Footer({logout}) {
     <div>
       <h4 className="text-lg font-semibold mb-4 text-white">Contact & Updates</h4>
       <ul className="space-y-2 text-gray-300 text-sm mb-4">
-        <li>Email: <a href="mailto:info@prasadmore.org" className="hover:text-blue-400 transition">info@prasadmore.org</a></li>
-        <li>Phone: <a href="tel:+911234567890" className="hover:text-blue-400 transition">+91 123 456 7890</a></li>
+        <li>Email: <a href="mailto:printnestpune@gmail.com" className="hover:text-blue-400 transition">printnestpune@gmail.com</a></li>
+        <li>Phone: <a href="tel:+91 8793621912" className="hover:text-blue-400 transition">+91 879 936 21912</a></li>
         <li>WhatsApp: <a href="#" className="hover:text-blue-400 transition">Chat Now</a></li>
         <li>Address: 123 Printing Street, Pune, India</li>
       </ul>

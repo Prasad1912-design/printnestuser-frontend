@@ -66,7 +66,7 @@ export default function ProfessionalCategoryPage({ user = {} }) {
   const [submitted, setSubmitted] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
-  const { email = "user@example.com", phone = "000-000-0000" } = user;
+  const { email = "printnestpune@gmail.com", phone = "8793621912" } = user;
 
   const filtered = useMemo(() =>
     categories.filter((c) => c.title.toLowerCase().includes(search.toLowerCase())), [search]

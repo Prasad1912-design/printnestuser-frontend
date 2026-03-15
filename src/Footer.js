@@ -23,7 +23,7 @@ export default function Footer() {
             <li>
               <span className="font-semibold">Email:</span>{" "}
               <a href="mailto:info@printnest.com" className="hover:text-yellow-400">
-                info@printnest.com
+                printnestpune@gmail.com
               </a>
             </li>
             <li>
