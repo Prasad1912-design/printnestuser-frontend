@@ -1,8 +1,8 @@
 // ProfessionalCategoryPage.jsx
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, Search } from "lucide-react";
-// import {Images} from "../../public/Images/wallet.png";
+import axios from "../utility/axiosPathFiles/axios";
 
 const categories = [
   { name: "wedding-cards", title: "Wedding Cards", subtitle: "Luxury & traditional wedding invitations", count: "25+", image:"https://res.cloudinary.com/delx00uwl/image/upload/v1768422576/sapphireDream_03_yuv8sg.jpg" },
@@ -74,20 +74,37 @@ export default function ProfessionalCategoryPage({ user = {} }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!message.trim()) return;
+    if (!message.trim()){
+      setSuccessMessage("Please Enter the Query First");
+      return;
+    }
 
-    console.log({ email, phone, message }); // Replace with real API
-    setSubmitted(true); // Indicates that the form is Submmited.
-    setSuccessMessage("✅ Your query has been sent successfully!"); // Success Message
-    setMessage(""); // The text box resets empty on submit.
+    axios.post('/addNewQuery',{query : message}).then(response=>{
+            
+      if(response.data.success)
+      {
+        setSubmitted(true); // Indicates that the form is Submmited.
+        setSuccessMessage("✅" + response.data.message); // Success Message
+        setMessage(""); // The text box resets empty on submit.
+      }
+    }).catch(error=>{
+      if(error.response?.data?.message) // dont use the data.success becuse when error occurs then the error contains the success true and the message.
+      {
+        setSuccessMessage(error.response.data.message);
+      }
+
+    })
   };
 
-  if(submitted) // On submitted Remove the Success Message After 3 Secs.
-  {
-  setTimeout(()=>{
-    setSubmitted(false);
-  },3000);
+ useEffect(() => {
+  if (submitted) {
+    const timer = setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }
+}, [submitted]);
 
   return (
     <main className="pt-28 max-w-7xl mx-auto px-4 py-12">
@@ -112,7 +129,7 @@ export default function ProfessionalCategoryPage({ user = {} }) {
 
       {/* Categories Grid */}
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-16">
-        {filtered.map((c) => <CategoryCard key={c.id} category={c} />)}
+        {filtered.map((c) => <CategoryCard key={c.name} category={c} />)}
 {filtered.length === 0 && (
   <div className="col-span-full flex flex-col items-center justify-center py-20 bg-gray-50 rounded-xl border border-gray-200">
     <div className="mb-4">
@@ -152,7 +169,7 @@ export default function ProfessionalCategoryPage({ user = {} }) {
           </div>
 
           <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-4">
-            {submitted && (
+            {successMessage  && (
               <p className="text-green-600 font-medium">{successMessage}</p>
             )}
             <textarea
