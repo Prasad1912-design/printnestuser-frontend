@@ -83,7 +83,7 @@ export default function CartView({logout}) {
       const razorpayOrderId = response.data.razorPayOrder.id;
 
       const options = {
-      key: "rzp_test_SImBWGHK5E7tDF",  // from Razorpay dashboard
+      key: process.env.REACT_APP_RAZORYPAY_KEY,  // from Razorpay dashboard
       amount: response.data.razorPayOrder.amount,    // amount in paisa
       currency: "INR",
       name: "Print Nest",
