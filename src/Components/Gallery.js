@@ -5,12 +5,12 @@ import { Mail, Phone, Search } from "lucide-react";
 // import {Images} from "../../public/Images/wallet.png";
 
 const categories = [
-  { name: "wedding-cards", title: "Wedding Cards", subtitle: "Luxury & traditional wedding invitations", count: "25+", image:"/images/wallet.png" },
-  { name: "digital-printing", title: "Digital Printing", subtitle: "Large format and digital prints", count: "48+", image: "/images/wallet.png" },
-  { name: "visiting-cards", title: "Visiting Cards", subtitle: "Corporate & premium business cards", count: "60+", image: "/images/wallet.png" },
-  { name: "brouchers", title: "Brochures", subtitle: "Tri-fold, bi-fold & catalog designs", count: "33+", image: "/images/wallet.png" },
-  { name: "posters", title: "Posters", subtitle: "Event and promotional posters", count: "88+", image: "/images/wallet.png" },
-  { name: "invitation-cards", title: "Invitation Cards", subtitle: "Birthdays, anniversaries & events", count: "38+", image: "/images/wallet.png" },
+  { name: "wedding-cards", title: "Wedding Cards", subtitle: "Luxury & traditional wedding invitations", count: "25+", image:"https://res.cloudinary.com/delx00uwl/image/upload/v1768422576/sapphireDream_03_yuv8sg.jpg" },
+  { name: "digital-printing", title: "Digital Printing", subtitle: "Large format and digital prints", count: "48+", image: "/Images/PlaceOrder/SliderImages/DigitalPrint.png" },
+  { name: "visiting-cards", title: "Visiting Cards", subtitle: "Corporate & premium business cards", count: "60+", image: "/Images/PlaceOrder/SliderImages/VisitingCards.png" },
+  { name: "brouchers", title: "Brochures", subtitle: "Tri-fold, bi-fold & catalog designs", count: "33+", image: "/Images/PlaceOrder/SliderImages/Brouchers.png" },
+  { name: "posters", title: "Posters", subtitle: "Event and promotional posters", count: "88+", image: "/Images/PlaceOrder/SliderImages/Posters.png" },
+  { name: "invitation-cards", title: "Invitation Cards", subtitle: "Birthdays, anniversaries & events", count: "38+", image: "/Images/PlaceOrder/SliderImages/InvitationCards.png" },
 ];
 
 
