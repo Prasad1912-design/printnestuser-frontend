@@ -57,8 +57,8 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-400">
             <li>
               <span className="font-medium text-gray-200">Email:</span>{" "}
-              <a href="mailto:info@printnest.com" className="hover:text-yellow-400 transition-colors">
-                info@printnest.com
+              <a href="mailto:printnestpune@gmail.com" className="hover:text-yellow-400 transition-colors">
+                printnestpune@gmail.com
               </a>
             </li>
             <li>
